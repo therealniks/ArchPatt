@@ -37,7 +37,6 @@ final class AppDetailViewController: UIViewController {
         self.view.backgroundColor = .white
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationItem.largeTitleDisplayMode = .never
-        
         self.addHeaderViewController()
         self.addDescriptionViewController()
     }
@@ -46,7 +45,6 @@ final class AppDetailViewController: UIViewController {
         self.view.addSubview(self.headerViewController.view)
         self.headerViewController.didMove(toParent: self)
         self.headerViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        
     NSLayoutConstraint.activate([
         self.headerViewController.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
         self.headerViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
@@ -55,16 +53,12 @@ final class AppDetailViewController: UIViewController {
     }
     
     private func addDescriptionViewController() {
-        // TODO: ДЗ, сделать другие сабмодули
-        self.addChild(releaseNoteViewController)
-        let releaseNoteView = releaseNoteViewController.view
-        releaseNoteViewController.didMove(toParent: self)
-        releaseNoteView?.translatesAutoresizingMaskIntoConstraints = false
+        self.addChild(self.releaseNoteViewController)
+        self.view.addSubview(self.releaseNoteViewController.view)
+        self.releaseNoteViewController.didMove(toParent: self)
+        self.releaseNoteViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            releaseNoteView!.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor)
+            releaseNoteViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor)
         ])
-        
-
-    
     }
 }

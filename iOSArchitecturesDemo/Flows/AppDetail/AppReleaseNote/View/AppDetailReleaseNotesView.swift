@@ -51,7 +51,7 @@ class AppDetailReleaseNotesView: UIView {
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textColor = .label
         label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
+
         return label
     }()
     
@@ -98,8 +98,12 @@ struct AppDetailReleaseNotesView_Preview: PreviewProvider {
         let view = AppDetailReleaseNotesView()
         view.versionLabel.text = "Vesion 1.1.0"
         view.releaseDateLabel.text = "6y ago"
-        view.descriptionLabel.text = "some text view"
-        return UIViewPreview(view)
-            .previewLayout(.fixed(width: 375, height: 300))
+        view.descriptionLabel.text = "some text"
+        return Group {
+            UIViewPreview(view)
+                .previewLayout(.fixed(width: 375, height: 300))
+            UIViewPreview(view)
+                .previewLayout(.fixed(width: 375, height: 300))
+        }
     }
 }

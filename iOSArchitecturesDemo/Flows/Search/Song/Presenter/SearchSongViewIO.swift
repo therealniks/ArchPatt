@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+protocol SearchSongViewInput {
+    var searchResults: [ITunesSong] { get set }
+    
+    func throbber(show: Bool)
+    func showError(error: Error)
+    func showNoResults()
+    func hideNoResults()
+}
+
+protocol SearchSongViewOutput {
+    func viewDidSearch(with query: String)
+    func viewDidSelectSong(_ song: ITunesSong)
+}
