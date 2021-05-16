@@ -9,7 +9,8 @@
 import UIKit
 struct SearchSongBuilder {
     static func build() -> UIViewController {
-        let presenter = SearchSongPresenter()
+        let interactor = SongInteractor()
+        let presenter = SearchSongPresenter(interactor: interactor)
         let viewController = SearchSongViewController(output: presenter)
         presenter.view = viewController
         return viewController

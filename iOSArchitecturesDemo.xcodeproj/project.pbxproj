@@ -16,6 +16,7 @@
 		80613AB42639B534003A6FC7 /* SearchViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80613AB32639B534003A6FC7 /* SearchViewOutput.swift */; };
 		80BA671326516C5400DFEDC9 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA671226516C5400DFEDC9 /* SearchRouter.swift */; };
 		80BA671526516C6F00DFEDC9 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA671426516C6F00DFEDC9 /* SearchInteractor.swift */; };
+		80BA671926516FEA00DFEDC9 /* SongInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA671826516FEA00DFEDC9 /* SongInteractor.swift */; };
 		80E82384264AD815008C864A /* SearchSongViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E82383264AD815008C864A /* SearchSongViewIO.swift */; };
 		80E82387264AEB75008C864A /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E82386264AEB75008C864A /* SongCell.swift */; };
 		80E8238A264AFE33008C864A /* SongCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E82389264AFE33008C864A /* SongCellModel.swift */; };
@@ -58,6 +59,7 @@
 		80613AB32639B534003A6FC7 /* SearchViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewOutput.swift; sourceTree = "<group>"; };
 		80BA671226516C5400DFEDC9 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		80BA671426516C6F00DFEDC9 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010\U0010\U0010SearchInteractor.swift"; sourceTree = "<group>"; };
+		80BA671826516FEA00DFEDC9 /* SongInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInteractor.swift; sourceTree = "<group>"; };
 		80E82383264AD815008C864A /* SearchSongViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongViewIO.swift; sourceTree = "<group>"; };
 		80E82386264AEB75008C864A /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		80E82389264AFE33008C864A /* SongCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellModel.swift; sourceTree = "<group>"; };
@@ -133,6 +135,21 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		80BA671626516FA200DFEDC9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				80BA671826516FEA00DFEDC9 /* SongInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		80BA671726516FAB00DFEDC9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		80E8237C264AD5D5008C864A /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +166,8 @@
 		80E8237D264AD5DB008C864A /* Song */ = {
 			isa = PBXGroup;
 			children = (
+				80BA671726516FAB00DFEDC9 /* Router */,
+				80BA671626516FA200DFEDC9 /* Interactor */,
 				80E8237F264AD7B0008C864A /* View */,
 				80E82380264AD7B7008C864A /* Presenter */,
 				80E82382264AD7C9008C864A /* Builder */,
@@ -626,6 +645,7 @@
 				80E82397264B01BA008C864A /* AppDetailReleaseNotesController.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				80E8239B264B0989008C864A /* AppDetailScreenShotController.swift in Sources */,
+				80BA671926516FEA00DFEDC9 /* SongInteractor.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
 				80E82395264B00F0008C864A /* AppDetailReleaseNotesView.swift in Sources */,
 				80E8238A264AFE33008C864A /* SongCellModel.swift in Sources */,
